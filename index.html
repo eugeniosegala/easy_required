@@ -1,0 +1,43 @@
+<!doctype html>
+
+<html lang="it">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>easy_required</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="Eugenio Segala">
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+
+</head>
+
+<body>
+
+  <form id="myform">
+
+    Name:
+    <input class="easy_required req_1" data-message="Name" type="text" /><br>
+
+    Surname:
+    <input class="easy_required req_2" data-message="Surname" type="text" /><br>
+
+    Phone:
+    <input type="text" /><br>
+
+    <button>Send</button>
+
+  </form>
+
+  <script src="js/easy_required.js"></script>
+
+  <script>
+  easy_required("#myform");
+  </script>
+
+</body>
+
+</html>
