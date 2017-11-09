@@ -13,20 +13,34 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+  <style>
+    body {
+      padding: 20px;
+    }
+  </style>
+
 </head>
 
 <body>
 
+  <h1>easy_required</h1>
+
+  <br><br>
+
   <form id="myform">
 
     Name:
-    <input class="easy_required req_1" data-message="Name" type="text" /><br>
+    <input class="easy_required req_1" data-message="Name" type="text" />
 
-    Surname:
-    <input class="easy_required req_2" data-message="Surname" type="text" /><br>
+    <br><br> Surname:
+    <input class="easy_required req_2" data-message="Surname" type="text" />
 
-    Phone:
-    <input type="text" /><br>
+    <br><br> Phone:
+    <input type="text" />
+
+    <br><br>
 
     <button>Send</button>
 
@@ -35,7 +49,7 @@
   <script src="js/easy_required.js"></script>
 
   <script>
-  easy_required("#myform");
+    easy_required("#myform");
   </script>
 
 </body>
