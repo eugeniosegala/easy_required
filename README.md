@@ -8,7 +8,7 @@ Just insert:
 
 ```
 // insert the script
-<script src="shining_star.js"></script>
+<script src="easy_required.js"></script>
 
 // and call
 easy_required("#myform");
