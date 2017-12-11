@@ -25,7 +25,7 @@ function easy_required(x) {
 
         if (campo.checked == false) {
 
-          messaggi.push("Il campo '" + campo.getAttribute("data-message") + "' è obbligatorio.\n");
+          messaggi.push("The field '" + campo.getAttribute("data-message") + "' is required.\n");
 
         };
 
@@ -33,7 +33,7 @@ function easy_required(x) {
 
         if (campo.value == "") {
 
-          messaggi.push("Il campo '" + campo.getAttribute("data-message") + "' è obbligatorio.\n");
+          messaggi.push("The field '" + campo.getAttribute("data-message") + "' is required.\n");
 
         };
 
