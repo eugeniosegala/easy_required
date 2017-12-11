@@ -19,7 +19,6 @@ and set the parameter:
 ```
 // this is an example of required field:
 <input class="easy_required" data-message="Name" type="text" />
-
 ```
 <br>
 
