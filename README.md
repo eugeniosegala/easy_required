@@ -17,11 +17,9 @@ easy_required("#myform");
 and set the parameter:
 
 ```
-// this is the first field (the two classes are required):
-<input class="easy_required req_1" data-message="Name" type="text" />
+// this is an example of required field:
+<input class="easy_required" data-message="Name" type="text" />
 
-// an example of second field (just increment req1 to req2 etc...)
-<input class="easy_required req_2" data-message="Surname" type="text" />
 ```
 <br>
 
