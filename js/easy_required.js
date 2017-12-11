@@ -9,38 +9,57 @@
 
 function easy_required(x) {
 
-var numero_campi = document.getElementsByClassName("easy_required").length;
+  var numero_campi = document.getElementsByClassName("easy_required").length;
 
-var i = 1;
-
-document.querySelector(x).onsubmit = function() {
+  var i = 1;
 
   var messaggi = [];
 
-  while (i <= numero_campi) {
+  document.querySelector(x).onsubmit = function() {
 
-    if (document.querySelector(".req_" + i + "").value == "") {
+    while (i <= numero_campi) {
 
-      messaggi.push("'" + document.querySelector(".req_" + i + "").getAttribute("data-message") + "' field is required.\n")
+      var campo = document.getElementsByClassName("easy_required")[i - 1];
+
+      if (campo.getAttribute("type") == "checkbox") {
+
+        if (campo.checked == false) {
+
+          messaggi.push("Il campo '" + campo.getAttribute("data-message") + "' è obbligatorio.\n");
+
+        };
+
+      } else {
+
+        if (campo.value == "") {
+
+          messaggi.push("Il campo '" + campo.getAttribute("data-message") + "' è obbligatorio.\n");
+
+        };
+
+      };
+
+
+      i++;
 
     };
 
-    i++;
+    if (messaggi.length > 0) {
 
-  }
+      alert(messaggi.toString().replace(/,/g, ''));
 
-  if (typeof messaggi !== 'undefined' && messaggi.length > 0) {
+      messaggi = [];
 
-    alert(messaggi.toString().replace(',',''));
+      i = 1;
 
-    messaggi = [];
+      return false;
 
-    i = 1;
+    } else {
 
-    return false;
+      // TURE CONDITIONS
 
-  }
+    };
+
+  };
 
 };
-
-}
