@@ -9,31 +9,32 @@
 
 function easy_required(x) {
 
+
+  var popup = document.getElementsByClassName("popup")[0];
+
+  var errore = document.getElementsByClassName("error")[0];
+
+
   var numero_campi = document.getElementsByClassName("easy_required").length;
 
-  var i = 1;
+  document.getElementById(x).onsubmit = function() {
 
-  var messaggi = [];
+    i = 1;
 
-  document.querySelector(x).onsubmit = function() {
+    messaggi = [];
 
     while (i <= numero_campi) {
 
       var campo = document.getElementsByClassName("easy_required")[i - 1];
 
-      if (campo.getAttribute("type") == "checkbox") {
+      if (campo.getAttribute("type") == "checkbox" && campo.checked == false) {
 
-        if (campo.checked == false) {
-
-          messaggi.push("The field '" + campo.getAttribute("data-message") + "' is required.\n");
-
-        };
-
+          messaggi.push("The checkbox '" + campo.getAttribute("data-message") + "' is required. <br>");
       } else {
 
         if (campo.value == "") {
 
-          messaggi.push("The field '" + campo.getAttribute("data-message") + "' is required.\n");
+          messaggi.push("The field '" + campo.getAttribute("data-message") + "' is required. <br>");
 
         };
 
@@ -46,20 +47,25 @@ function easy_required(x) {
 
     if (messaggi.length > 0) {
 
-      alert(messaggi.toString().replace(/,/g, ''));
-
-      messaggi = [];
-
-      i = 1;
+      errore.innerHTML = (messaggi.toString().replace(/,/g, ''));
+      popup.style.display = "block";
 
       return false;
 
     } else {
 
-      // TURE CONDITIONS
+      // THIS IS THE SENDING CASE
 
     };
 
   };
+
+
+  document.getElementsByClassName("close")[0].onclick = function() {
+
+    popup.style.display = "none";
+
+  }
+
 
 };

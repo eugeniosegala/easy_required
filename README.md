@@ -1,6 +1,7 @@
 # easy_required
 
 An extremely simply way for a client-side form protection.
+This script is dev in VanillJS and has an hight browser support.
 
 <strong>Guide:</strong>
 
@@ -19,7 +20,17 @@ and set the parameter:
 ```
 // this is an example of required field:
 <input class="easy_required" data-message="Name" type="text" />
+
+//You need this element for the popup:
+<div class="popup">
+  <div class="error"></div>
+  <div class="close">
+    <p>x</p>
+  </div>
+</div>
 ```
+<p>Note: you can change the popup style or anithing else with your own CSS</p>
+
 <br>
 
 <p>💾💾💾 <a href="http://www.testersite.it/github/easy_required/v1/">DEMO HERE</a> 💾💾💾</p>
