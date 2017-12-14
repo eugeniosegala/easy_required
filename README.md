@@ -29,7 +29,7 @@ and set the parameter:
   </div>
 </div>
 ```
-<p>Field support: all input the checkbox</p>
+<p>Field support: all input and checkbox.</p>
 <p>Note: you can change the popup style or anithing else with your own CSS.</p>
 
 <br>
