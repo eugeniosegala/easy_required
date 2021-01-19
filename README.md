@@ -34,10 +34,6 @@ and set the parameter:
 
 <br>
 
-<p><a href="http://www.testersite.it/github/easy_required/v1/">DEMO HERE</a></p>
-
-<br>
-
 # MIT License
 
 Copyright (c) 2017 Eugenio Segala
