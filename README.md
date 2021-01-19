@@ -32,8 +32,6 @@ and set the parameter:
 <p>Field support: all input and checkbox.</p>
 <p>Note: you can change the popup style or anithing else with your own CSS.</p>
 
-<br>
-
 # MIT License
 
 Copyright (c) 2017 Eugenio Segala
